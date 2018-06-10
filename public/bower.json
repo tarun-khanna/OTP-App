@@ -1,0 +1,23 @@
+{
+  "name": "public",
+  "homepage": "https://github.com/tarunraj95/OTP_Assignment",
+  "authors": [
+    "tarunraj95 <tarunrajkhanna@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-router": "^1.0.18",
+    "bootstrap": "^4.1.1",
+    "ng-dialog": "^1.4.0",
+    "angular": "^1.7.1"
+  }
+}
