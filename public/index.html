@@ -16,11 +16,17 @@
     <script src="./js/appRoutes.js"></script>
     <script src="./js/factories/apiFactory.js"></script>
     <script src="./js/controllers/indexCtrl.js"></script>
+    <script src="./js/controllers/contactsCtrl.js"></script>
+    <script src="./js/controllers/contactInfoCtrl.js"></script>
+    <script src="./js/controllers/sendMessageCtrl.js"></script>
 </head>
 
+
 <body ng-app="app" ng-controller="indexCtrl">
-    <button ui-sref="chats">Chats</button>
+
     <button ui-sref="contacts">COntacts</button>
+    <button ui-sref="chats">Chats</button>
+    <button ui-sref="sendMessage">Send message</button>
     <ui-view></ui-view>
 </body>
 
