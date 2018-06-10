@@ -13,12 +13,15 @@
 
     <!-- custom scripts -->
     <script src="./js/app.js"></script>
+    <script src="./js/appRoutes.js"></script>
     <script src="./js/factories/apiFactory.js"></script>
     <script src="./js/controllers/indexCtrl.js"></script>
 </head>
 
 <body ng-app="app" ng-controller="indexCtrl">
-    <p>hey</p>
+    <button ui-sref="chats">Chats</button>
+    <button ui-sref="contacts">COntacts</button>
+    <ui-view></ui-view>
 </body>
 
 </html>
