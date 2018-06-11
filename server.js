@@ -1,3 +1,4 @@
+const smsDB = require("./db/smsOperations");
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
@@ -22,11 +23,15 @@ app.post("/sendSms", (request, response) => {
       body: sms.text
     })
     .then(message => {
+      smsDB.storeSms(sms);
       console.log("message.sid=", message.sid);
       response.send(message.sid);
     });
 });
 
+app.get("/getSmsList", (request, response) => {
+  smsDB.getSmsList(response);
+});
 const port = process.env.PORT || 8080;
 app.listen(port, () => {
   console.log("Server start on port....", port);

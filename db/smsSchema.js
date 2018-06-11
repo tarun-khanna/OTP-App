@@ -8,6 +8,6 @@ var smsSchema = new Schema({
   text: String,
   timeStamp: Date
 });
-var smsModel = connection.model("smsCollection", userSchema);
+var smsModel = connection.model("smsCollection", smsSchema);
 
 module.exports = smsModel;
