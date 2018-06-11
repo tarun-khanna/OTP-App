@@ -1,3 +1,5 @@
 <div ng-controller="contactInfoCtrl">
-    this is info page for a cotact
+    <img src="{{selectedContact.image_url}}" class="rounded-circle" alt="">
+    <p>{{selectedContact.firstName}}</p>
+    <button ng-click="sendMessage()">Send Message!</button>
 </div>

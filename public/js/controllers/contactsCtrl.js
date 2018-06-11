@@ -1,4 +1,4 @@
-app.controller("contactsCtrl", function($http, $scope, $rootScope) {
+app.controller("contactsCtrl", function($http, $scope, $rootScope, $state) {
   $http
     .get(
       "https://raw.githubusercontent.com/tarunraj95/Json_data/master/contacts.json"
@@ -14,5 +14,6 @@ app.controller("contactsCtrl", function($http, $scope, $rootScope) {
 
   $scope.openContact = function(index) {
     $rootScope.selectedContact = $scope.contacts[index];
+    $state.go("contactInfo");
   };
 });

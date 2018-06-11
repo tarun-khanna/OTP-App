@@ -10,7 +10,7 @@ var smsOperations = {
       }
     });
   },
-  getSmsList: function(response) {
+  getSms: function(response) {
     let smsList = smsCollection.find({}, (err, doc) => {
       if (err) {
         console.log("Error while fetching sms records from DB!!");

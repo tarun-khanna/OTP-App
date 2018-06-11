@@ -29,8 +29,8 @@ app.post("/sendSms", (request, response) => {
     });
 });
 
-app.get("/getSmsList", (request, response) => {
-  smsDB.getSmsList(response);
+app.get("/getSms", (request, response) => {
+  smsDB.getSms(response);
 });
 const port = process.env.PORT || 8080;
 app.listen(port, () => {

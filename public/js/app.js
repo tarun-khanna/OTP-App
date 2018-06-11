@@ -1,1 +1,1 @@
-const app = angular.module("app", ["ui.router"]);
+const app = angular.module("app", ["ui.router", "ngDialog"]);
