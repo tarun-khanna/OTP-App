@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="./bower_components/ng-dialog/css/ngDialog-theme-default.min.css">
 
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
     <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="./bower_components/angular/angular.min.js"></script>
     <script src="./bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
@@ -26,6 +28,17 @@
     <script src="./js/controllers/contactInfoCtrl.js"></script>
     <script src="./js/controllers/sendMessageCtrl.js"></script>
     <script src="./js/controllers/chatsCtrl.js"></script>
+
+    <style>
+        html {
+            height: 100%;
+        }
+
+        body {
+            height: 91%;
+        }
+    </style>
+
 </head>
 
 
@@ -51,7 +64,7 @@
             </div>
         </div>
     </nav>
-    <div class="container" id="content" style="margin-top: 55px;">
+    <div class="container" id="content" style="margin-top: 55px;height: 100%;">
         <ui-view></ui-view>
     </div>
 

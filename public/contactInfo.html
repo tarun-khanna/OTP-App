@@ -1,5 +1,17 @@
-<div ng-controller="contactInfoCtrl">
-    <img src="{{selectedContact.image_url}}" class="rounded-circle" alt="">
-    <p>{{selectedContact.firstName}}</p>
-    <button ng-click="sendMessage()">Send Message!</button>
+<div ng-controller="contactInfoCtrl" class="align-items-center d-flex h-100">
+    <div class="row w-100 p-5" style="border-radius: 70px;border-bottom: 2px solid lightgray;border-top: 2px solid lightgray;">
+        <div class="col-lg-6 col-md-12 col-sm-12 text-center">
+            <img src="{{selectedContact.image_url}}" class="rounded-circle" alt="">
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12 badge-light p-3" style="min-height: 160px">
+            <h3>
+                <i class="fas fa-address-book mr-2"></i>{{selectedContact.firstName}} {{selectedContact.lastName}}</h3>
+            <h4>
+                <i class="fas fa-phone-square mr-2"></i>{{selectedContact.phone}}</h4>
+            <button class="btn btn-block btn-success position-absolute" style="bottom: 0px;left: 0px;" ng-click="sendMessage()">Send Message!
+                <i class="fas fa-envelope"></i>
+            </button>
+        </div>
+    </div>
+
 </div>
