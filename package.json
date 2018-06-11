@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "smsdb": "mongod --dbpath='/media/tarunraj95/My Work/ubuntu 16.04/web/js/smsDB'"
   },
   "repository": {
     "type": "git",

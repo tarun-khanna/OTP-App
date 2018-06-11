@@ -1,10 +1,10 @@
 app.factory("apiFactory", function($q, $http) {
   return {
     getData: function() {},
-    sendMessage: function(message) {
+    sendMessage: function(sms) {
       let deferredObj = $q.defer();
-      console.log("message recieved in factory=", message);
-      $http.post("/sendMessage", { message }).then(
+      console.log("sms recieved in factory=", sms);
+      $http.post("/sendSms", { sms }).then(
         data => {
           deferredObj.resolve(data);
         },

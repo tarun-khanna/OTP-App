@@ -12,14 +12,14 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.post("/sendMessage", (request, response) => {
-  console.log("message recieved..", request.body.message);
-  let OTP = Math.floor(Math.random() * (999999 - 100000) + 100000);
+app.post("/sendSms", (request, response) => {
+  console.log("message recieved..", request.body.sms);
+  let sms = request.body.sms;
   client.messages
     .create({
       from: "+18317048607",
-      to: "+917042466206",
-      body: `Hi. Your OTP is: ${OTP}. the message is ${request.body.message}`
+      to: sms.phone,
+      body: sms.text
     })
     .then(message => {
       console.log("message.sid=", message.sid);
