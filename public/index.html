@@ -50,6 +50,7 @@
                 aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <h4 class="mr-auto" style="color: white">KISAAN NETWORK</h4 class="mr-auto">
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
@@ -57,7 +58,7 @@
                         </button>
                     </li>
                     <li class="nav-item">
-                        <button class="btn btn-default m-2" ui-sref="chats">Chats
+                        <button class="btn btn-default m-2" ui-sref="chats">SMS Sent
                         </button>
                     </li>
                 </ul>
@@ -65,7 +66,14 @@
         </div>
     </nav>
     <div class="container" id="content" style="margin-top: 55px;height: 100%;">
-        <ui-view></ui-view>
+        <ui-view>
+            <div class="align-items-center d-flex h-100 justify-content-center">
+                <span class="alert-danger p-4"> Select any of the options from menu
+                    <i class="fas fa-hand-point-up" style="font-size: 75px;color: black"></i>
+                </span>
+
+            </div>
+        </ui-view>
     </div>
 
 </body>

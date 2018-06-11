@@ -12,9 +12,5 @@ app.config(function($stateProvider, $urlRouterProvider) {
     .state("chats", {
       url: "/chats",
       templateUrl: "chats.html"
-    })
-    .state("sendMessage", {
-      url: "/sendMessage",
-      templateUrl: "sendMessage.html"
     });
 });

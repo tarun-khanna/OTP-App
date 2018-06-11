@@ -3,7 +3,10 @@ app.controller("sendMessageCtrl", function($scope, apiFactory, $rootScope) {
   $scope.message = `Hi. Your OTP is: ${$scope.OTP}`;
   $scope.sendMessage = function() {
     let sms = {
-      to: $rootScope.selectedContact.firstName,
+      to:
+        $rootScope.selectedContact.firstName +
+        "  " +
+        $rootScope.selectedContact.lastName,
       text: $scope.message,
       timeStamp: new Date(),
       phone: $rootScope.selectedContact.phone

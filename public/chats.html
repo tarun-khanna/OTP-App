@@ -1,3 +1,26 @@
 <div ng-controller="chatsCtrl">
-    this is list of messages sent page {{messages}}
+    <h2>SMS SENT</h2>
+    <!--     <div class="list-group">
+ -->
+    <!-- <div ng-repeat="message in messages | orderBy : '-timeStamp'" class="d-flex justify-content-between list-group-item list-group-item-action">
+            <div>TO : {{message.to}}</div>
+            <div>OTP : {{message.text.split("is: ")[1]}}</div>
+            <div>Time : {{message.timeStamp | date : "medium"}}</div>
+        </div> -->
+    <table class="table table-striped" style="table-layout: fixed">
+        <thead>
+            <th>TO</th>
+            <th class="text-center">OTP</th>
+            <th class="text-center">TIME</th>
+        </thead>
+        <tbody>
+            <tr ng-repeat="message in messages | orderBy : '-timeStamp'">
+                <td>{{message.to}}</td>
+                <td class="text-center">{{message.text.split("is: ")[1]}}</td>
+                <td class="text-center">{{message.timeStamp | date : "medium"}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <!--     </div>
+ -->
 </div>
