@@ -6,7 +6,7 @@ app.controller("sendMessageCtrl", function($scope, apiFactory) {
       to: $scope.to,
       text: $scope.message,
       timeStamp: new Date(),
-      phone: "+917042466206"
+      phone: "+918750385358"
     };
     apiFactory.sendMessage(sms).then(
       data => {
