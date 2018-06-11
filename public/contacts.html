@@ -1,3 +1,14 @@
+<style>
+    .list-group-item:hover {
+        cursor: pointer;
+    }
+</style>
 <div ng-controller="contactsCtrl">
-    hi this is the contact page! https://raw.githubusercontent.com/tarunraj95/Json_data/master/contacts.json
+    <h2>Contacts</h2>
+    <div class="list-group">
+        <a ng-click="openContact($index)" ng-repeat="contact in contacts" class="list-group-item list-group-item-action">
+            <img ng-src="{{contact.image_url}}" alt="profile image" class="m-2" style="height: 20px;">{{contact.firstName}} {{contact.lastName}}
+
+        </a>
+    </div>
 </div>
