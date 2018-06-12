@@ -4,6 +4,9 @@ app.controller("sendMessageCtrl", function(
   $rootScope,
   $state
 ) {
+  if (!$rootScope.selectedContact) {
+    $state.go("home");
+  }
   $scope.OTP = Math.floor(Math.random() * (999999 - 100000) + 100000);
   $scope.message = `Hi. Your OTP is: ${$scope.OTP}`;
   $scope.sendMessage = function() {
