@@ -1,5 +1,16 @@
-<div ng-controller="sendMessageCtrl">
-    <textarea cols="30" rows="10" ng-model="message" disabled></textarea>Sending message to:
-    <p>{{selectedContact.firstName}}</p>
-    <button class="btn btn-primary" ng-click="sendMessage()">send!</button>
+<div ng-controller="sendMessageCtrl" class="h-100">
+    <h4 class="text-center">Sending the following sms to : {{selectedContact.firstName}} {{selectedContact.lastName}}</h4>
+    <div class="align-items-center d-flex h-75 justify-content-center" style="box-shadow: 2px 2px 17px darkgrey;">
+        <div class="row">
+            <div class="col-lg-9 col-md-12 col-sm-12 p-0">
+                <textarea class="h-100 w-100" cols="30" rows="3" ng-model="message" disabled></textarea>
+            </div>
+            <div class="col-lg-3 col-md-12 col-sm-12 p-0">
+                <button class="btn btn-primary h-100 w-100" ng-click="sendMessage()">Send!
+                    <i class="fas fa-envelope"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
 </div>
